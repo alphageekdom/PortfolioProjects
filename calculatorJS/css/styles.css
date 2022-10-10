@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.calculator {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    padding: 5% 5%;
+    border: 1px solid black ;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    gap: 45px;
+}
