@@ -1,21 +1,80 @@
+:root {
+    --black--background: black;
+    --orange-button: #F69A06;
+    --grey-button: #A0A0A0;
+    --dark-button: #313131;
+}
+
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-.calculator {
+.container {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    width: 500px;
+    width: 100vw;
     height: 500px;
-    padding: 5% 5%;
-    border: 1px solid black ;
+    margin-top: 100px;
 }
+
+
+.calculator {
+    width: 300px;
+    height: 100%;
+}
+
+/* Display Configuration */
+
+.display {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 50px;
+    height: 25%;
+    background: var(--black--background);
+    color: white;
+
+}
+
+/* Keyboard-Buttons Configuration */
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    background: var(--black--background);
+}
+
 
 button {
     width: 60px;
     height: 60px;
-    gap: 45px;
+    border-radius: 50%;
+    font-size: 30px;
+    background: var(--dark-button);
+    color: white;
+    border: none;
+}
+
+.span-2 {
+    grid-column: span 2;
+    width: 100%;
+    border-radius: 25px;
+    text-align: start;
+    padding-left: 20px;
+}
+
+.btn-orange {
+    background: var(--orange-button);
+    color: white;
+}
+
+.btn-grey {
+    background: var(--grey-button);
+    color: black;
 }
