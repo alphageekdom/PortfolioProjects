@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
     --black--background: black;
     --orange-button: #F69A06;
@@ -9,6 +11,14 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(355deg, rgba(0,202,252,1) 27%, rgba(0,0,0,1) 68%);
 }
 
 .container {
@@ -24,24 +34,34 @@
 .calculator {
     width: 300px;
     height: 100%;
+    border: solid gray;
+    border-radius: 15px;
 }
 
 /* Display Configuration */
 
 .display {
+    grid-column: 1 / -1;
     display: flex;
-    justify-content: end;
-    align-items: center;
-    font-size: 50px;
-    height: 25%;
-    background: var(--black--background);
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
     color: white;
+    height: 25%;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: 50px;
+}
 
+.display .previous-entry {
+    font-size: 25px;
 }
 
 /* Keyboard-Buttons Configuration */
 
 .buttons {
+    height: 75%;
+    border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
@@ -59,6 +79,10 @@ button {
     background: var(--dark-button);
     color: white;
     border: none;
+}
+
+button:hover {
+    box-shadow: 0px 0px 15px 2.5px #00cafc;
 }
 
 .span-2 {
