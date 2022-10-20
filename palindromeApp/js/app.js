@@ -9,6 +9,12 @@ button.addEventListener('click', () => {
 })
 
 
+function reset() {
+    checkmark.classList.remove('text-success', 'text-danger');
+    // checkmark.innerHTML = "";
+}
+
+
 
 function palindrome(str) {
 
@@ -28,10 +34,14 @@ function palindrome(str) {
     if (newStr === revStr) {
         console.log("Yes, it's a palindrome.")
         checkmark.classList.add('text-success');
+        checkmark.classList.remove('text-danger');
+        checkmark.innerHTML = "Yes";
         return true;
     } else {
         console.log("Not, it's not a palindrome.")
         checkmark.classList.add('text-danger');
+        checkmark.classList.remove('text-success');
+        checkmark.innerHTML = "No";
         return false;
     }
 }
